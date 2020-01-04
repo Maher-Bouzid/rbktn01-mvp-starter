@@ -32,32 +32,33 @@ app.post('/login', async (req, res) => {
 
 app.post('/data', async (req, res) => {
   db.getData(req.body.username)
-    .then(data => {
-      res.status(201).json(data.reverse());
-    })
+    .then(data => {res.status(201).json(data.reverse())})
+    .catch((err)=> console.log({err}))
 });
 
 app.post('/todo/add', async (req, res) => {
   db.addTodo(req.body.todo, req.body.username)
-    .then(data => {
-      res.status(201).json(data.reverse())
-    })
+    .then(data => {res.status(201).json(data.reverse())})
+    .catch((err)=> console.log({err}))
 });
 
 
 app.post('/todo/update', async (req, res) => {
   db.updateTodo(req.body.username, req.body["todo[_id]"], req.body['todo[todo]'])
     .then(result => res.json(result.reverse()))
+    .catch((err)=> console.log({err}))
 });
 
 app.post('/todo/delete', async (req, res) => {
   db.deletTodo(req.body["todo[_id]"], req.body.username)
     .then(result => res.json(result.reverse()))
+    .catch((err)=> console.log({err}))
 });
 
 app.post('/todo/update/state', async (req, res) => {
   console.log(req.body)
   db.updateState(req.body.username, req.body._id, req.body.done)
     .then(result => res.json(result.reverse()))
+    .catch((err)=> console.log({err}))
 });
 

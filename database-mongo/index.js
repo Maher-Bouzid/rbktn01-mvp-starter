@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 require('dotenv').config();
 
-mongoose.connect(`mongodb+srv://maher:${process.env.PSW}@cluster0-ztajo.mongodb.net/test?retryWrites=true&w=majority`);
+mongoose.connect(`mongodb+srv://maher:${process.env.PSW}@cluster0-ztajo.mongodb.net/test?retryWrites=true&w=majority`, { useNewUrlParser: true });
 
 var db = mongoose.connection;
 
