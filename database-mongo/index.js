@@ -7,7 +7,7 @@ mongoose.connect(`mongodb+srv://maher:${process.env.PSW}@cluster0-ztajo.mongodb.
 var db = mongoose.connection;
 
 db.on('error', function () {
-  console.log('mongoose connection error');
+  console.log('mongoose connection error') ;
 });
 
 db.once('open', function () {
