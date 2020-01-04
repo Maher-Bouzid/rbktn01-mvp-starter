@@ -14,7 +14,9 @@ app.use(bodyParser.json())
 
 app.use(express.static(path.join(__dirname, '/../react-client/dist')));
 
-
+app.get('/', (req, res)=>{
+  res.sendFile((__dirname + '/../react-client/dist/index.html'))
+})
 app.listen(PORT, function () {
   console.log('listening on port 3000!');
 });
