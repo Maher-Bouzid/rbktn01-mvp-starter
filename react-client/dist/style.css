@@ -1,0 +1,104 @@
+*{
+  outline:none
+}
+body{
+  background-color: #eee;
+}
+.form1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.login{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 800px;
+}
+.form1 input{
+  border:none;
+  background: none;
+  border-bottom: 2px solid black;
+  height: 40px;
+  width: 200px;
+  font-size: 20px;
+}
+.form1 button {
+  border:none;
+  background: none;
+  border-bottom: 2px solid black;
+  width: 100px;
+  height: 40px;
+  transition:0.1s;
+  font-size: 20px;
+
+}
+.form1 button:hover{
+  background-color: black;
+  color: white;
+  border:2px solid white;
+  transform: scale(1.09);
+  transition:0.1s
+}
+
+.form3{
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  position: relative;
+}
+.form3 h3{
+  border :1px solid black;
+  width:600px;
+  height: 70px;
+  text-align: left;
+  position: relative;
+
+
+
+}
+.form3 form{
+  position: absolute;
+  width:600px;
+  height: 70px;
+  text-align: left;
+  bottom:20px;
+  left: 624px;
+
+}
+.form3 form input{
+  width: 98.96%;
+  height: 80%;
+  background-color: #eee;
+  border:none;
+  font-size: 20px;
+  font-weight: bold;
+  border-top: 1px solid black;
+  box-shadow: 12px 12px 20px ;
+
+
+}
+.form3 form button{
+  height: 20px;
+  width: 100%;
+  border:2px solid black;
+  margin-top: 20px;
+}
+.form3 section{
+ display: flex;
+}
+.form3 section div {
+  margin-top:20px;
+  display: flex;
+  flex-direction: column;
+}
+.form3 section div button{
+  height: 40%;
+  width: 40px;
+  font-size: 30px;
+  padding: 0;
+}
+.done{
+  background-color: #d9f9a7;
+}
