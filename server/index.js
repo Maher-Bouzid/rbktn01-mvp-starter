@@ -1,6 +1,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 const bcrypt = require('bcrypt');
+const path = require('path')
 
 let PORT = process.env._PORT || 3000;
 var db = require('../database-mongo');
@@ -11,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 
-app.use(express.static(__dirname + '/../react-client/dist'));
+app.use(express.static(path.join(__dirname, '/../react-client/dist')));
 
 
 app.listen(PORT, function () {
