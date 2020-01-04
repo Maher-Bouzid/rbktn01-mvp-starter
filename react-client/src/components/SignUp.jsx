@@ -13,8 +13,9 @@ class SignUp extends React.Component {
     }
     this.props.sendUserInfo('/signup', data)
       .then(res => {
-        console.log(res)
         res && this.props.renderMain(res, document.querySelector('#username').value)
+        document.querySelector('#username').value = "";
+        document.querySelector('#password').value = "";
       })
   }
 

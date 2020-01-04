@@ -55,12 +55,12 @@ class List extends React.Component {
   render() {
     return (
       <div>
-        <h2 style={{ width: "100%", textAlign: "center" }}>Welcome {this.props.username}</h2>
+        <h1 style={{ width: "100%", textAlign: "center" }}>Welcome {this.props.username}</h1>
         <form className="form1">
           <input type="text" name="todo" placeholder="Add a Post..." id="todo" />
           <button style={{ marginTop: "20px" }} type="submit" onClick={this.addTodo.bind(this)}><i className='fa fa-plus'></i>  Add</button>
         </form>
-        <h4 style={{ width: "100%", textAlign: "center" }} >Here is your todo list :</h4>
+        <h2 style={{ width: "100%", textAlign: "center" }} >Here is your Posts :</h2>
         {
           this.state.data.length ? this.state.data.map((elm, i) => (
             <ListItem data={elm} key={elm._id} id={i} updateTodos={this.updateTodos.bind(this)} showForm={this.showForm.bind(this)} updateTodos={this.updateTodos.bind(this)} deleteTodo={this.deleteTodo.bind(this)} updateState={this.updateState.bind(this) }/>

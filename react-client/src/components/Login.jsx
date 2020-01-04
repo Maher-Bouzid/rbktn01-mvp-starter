@@ -16,6 +16,8 @@ class Login extends React.Component {
     this.props.sendUserInfo('/login', data)
       .then(res => {
         res && this.props.renderMain(res, document.querySelector('#username').value)
+        document.querySelector('#username').value = "";
+        document.querySelector('#password').value = "";
       })
   }
 
