@@ -1,7 +1,10 @@
 var mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const psw = require('../psw');
-mongoose.connect(`mongodb+srv://maher:${psw.psw}@cluster0-ztajo.mongodb.net/test?retryWrites=true&w=majority`);
+
+
+let password = process.env._PSW || psw.psw
+mongoose.connect(`mongodb+srv://maher:${password}@cluster0-ztajo.mongodb.net/test?retryWrites=true&w=majority`);
 
 var db = mongoose.connection;
 
